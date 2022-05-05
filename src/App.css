@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  height: 100%;
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 40vh;
   pointer-events: none;
   border-radius: 50%;
 }
@@ -11,7 +12,7 @@
 
 .Twitter-Button {
   padding: 5px;
-  font-size: calc(10px + 1vmin);
+  font-size: calc(10px + 1.5vmin);
   display: flex;
   align-items: center;
   background: none;
@@ -48,9 +49,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-around;
+  font-size: calc(15px + 2vmin);
   color: white;
+}
+
+.App-header > p {
+  padding: 0 10px;
 }
 
 .App-link {
