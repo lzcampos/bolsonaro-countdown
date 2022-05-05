@@ -8,15 +8,26 @@
   border-radius: 50%;
 }
 
-.Twitter-Container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-.Twitter-Container > p {
-  padding-left: 10px;
+
+.Twitter-Button {
+  padding: 5px;
   font-size: calc(10px + 1vmin);
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
 }
+
+.Twitter-Button > p {
+  color: white;
+  padding-left: 10px;
+  text-decoration: underline;
+}
+
+.Twitter-Button > p:hover {
+  color: lightblue;
+}
+
 .Twitter-Logo {
   height: 5vh;
 }

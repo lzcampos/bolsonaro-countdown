@@ -12,10 +12,11 @@ function getDaysToMandateEnd() {
   return 365 - day
 }
 
-function getTweetText() {
+function getTweetUrl() {
   let url = "https://twitter.com/intent/tweet?text="
   let daysToMandateEnd = getDaysToMandateEnd()
   url += `Faltam ${daysToMandateEnd} dias para o fim do governo Bolsonaro.`
+  url += `%0a %0ahttps://bolsonaro-countdown1.herokuapp.com/`
   return url
 }
 
@@ -27,14 +28,13 @@ function App() {
         <p>
           Faltam <span className="Days-Span">{getDaysToMandateEnd()}</span> dias para o fim do governo Bolsonaro.
         </p>
-        <div className="Twitter-Container">
-          <a href={getTweetText()}
-            target="_blank"
-          >
-            <img src={twitterLogo} className="Twitter-Logo" alt="" />
-          </a>
+       
+        <button onClick={ () => window.open(getTweetUrl(), '_blank') }
+          className="Twitter-Button"
+        >
+          <img src={twitterLogo} className="Twitter-Logo" alt="" />
           <p>Poste isso no twitter</p>
-        </div>
+        </button>
       </header>
     </div>
   );
